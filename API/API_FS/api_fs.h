@@ -1,0 +1,30 @@
+#ifndef _FS_API_H_
+#define _FS_API_H_
+#include "sh86278_memory_assign.h"
+
+#define	FS_BYTE_PER_LAYER 		5
+#define	FS_MAX_SUBDIR_DEPTH 	8
+#define	FS_NAME_LEN_CONST		64
+
+#define FS_FATBUF				X_ADDR_FS_FATBUF				//(0x7200~0x73ff)
+#define FS_FATBUF_OFFSET		(X_ADDR_FS_FATBUF-X_ADDR_IBUF)/2//100 words
+#define	FS_DBUF0				X_ADDR_DBUF0					//dbuf0(0x4000)
+#define	FS_DBUF1				X_ADDR_DBUF1	
+#define FS_FCOMBUF				X_ADDR_FCOMBUF					//0x6600
+#define FS_FCOMBUF_OFFSET		(FS_FCOMBUF-X_ADDR_FBUF)/2		//0x300
+
+#define FS_BATBUF_BK1			(X_ADDR_CBUF + 0x3400)
+#define FS_BATBUF_BK2			(X_ADDR_CBUF + 0x3200)
+
+#define FS_OPENFILE_TYPE_MP3	0x01
+#define FS_OPENFILE_TYPE_MMV	0x02
+#define FS_OPENFILE_TYPE_AMV	0x03
+#define FS_OPENFILE_TYPE_WAV	0x04
+#define FS_OPENFILE_TYPE_BMP	0x05
+#define FS_OPENFILE_TYPE_JPG	0x06
+#define FS_OPENFILE_TYPE_TXT	0x07
+#define FS_OPENFILE_TYPE_LRC	0x08
+#define FS_OPENFILE_TYPE_BIN	0x09
+#define FS_OPENFILE_TYPE_AVI	0x0A
+
+#endif
